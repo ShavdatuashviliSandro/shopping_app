@@ -1,5 +1,6 @@
 <template>
   <h3>
+    {{main}}
     <p class="welcome-text">Welcome to shopping mall</p>
     <HeaderComponent/>
   </h3>
@@ -11,6 +12,11 @@ export default {
   name: 'App',
   components:{
     HeaderComponent
+  },
+  data(){
+    return{
+      main: 'main title'
+    }
   }
 }
 </script>
