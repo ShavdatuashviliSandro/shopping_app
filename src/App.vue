@@ -1,8 +1,9 @@
 <template>
   <h3>
-    {{main}}
+    <HeaderComponent :header_title="'Hello Header from props'" />
     <p class="welcome-text">Welcome to shopping mall</p>
-    <HeaderComponent/>
+    <HeaderComponent :header_title="'Hello second Header from props'" />
+
   </h3>
 </template>
 

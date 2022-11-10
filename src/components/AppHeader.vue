@@ -1,38 +1,16 @@
 <template>
-  <div class="main-class">
-<!--    directives-->
-    <h1 v-if="render===true">Shopping mall is open</h1>
-    <h1 v-else-if="render===false">Sorry, we're closed</h1>
-    <h1 v-else>Something bad happened to website</h1>
-    <br>
-    <p>Tech stack used in this</p>
-    <p v-for="(item,index) in dataArray" :key="index">{{ index }} - {{ item }}</p>
-    <br>
-    <h3 :class="{'dev-text' : developerClass}">Developers:</h3>
-    <p v-for="(item,index) in developersArray" :key="index">{{ item }}</p>
-<!--    -->
-    <div v-html="editor"></div>
-<!--    -->
-<!--    interacted input-->
-    <label for="text">Enter:</label>
-    <input type="text" v-model="textValue">
-    {{ textValue }}
-<!--    -->
-    <div class="box" @click="clickFunction">
-      {{ getData }}
-    </div>
-<!--    button increase-decrease-->
-    <button @click="numberVariable--">-</button>
-    {{ numberVariable }}
-    <button @click="numberVariable++">+</button>
-    <p>You want {{getData}} piece</p>
-<!--    -->
-  </div>
+  <h1 v-if="header_title===undefined">this is default header</h1>
+  <h1>{{header_title}}</h1>
 </template>
 
 <script>
 export default {
   // data is for variables we use in html, variables like Array, String, div block etc.
+  props: {
+    header_title: {
+      required: false
+    }
+  },
   data() {
     return {
       numberVariable: 0,
