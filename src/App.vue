@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h3>
+    <p class="welcome-text">Welcome to shopping mall</p>
+    <HeaderComponent/>
+  </h3>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeaderComponent from './components/AppHeader'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    HeaderComponent
   }
 }
 </script>
@@ -22,5 +23,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.welcome-text{
+  color: gray;
 }
 </style>
