@@ -25,11 +25,10 @@ export default {
     }
   },
   mounted(){
-
   },
   computed:{
     getData(){
-      return this.productsData.filter(el => el.title.includes(this.searchWord))
+      return this.productsData.filter(el => el.title.toLowerCase().includes(this.searchWord.toLowerCase()))
     }
   }
 }
