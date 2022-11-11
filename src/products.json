@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "some shop item",
+    "description": "this is item description",
+    "price": 50,
+    "url": "https://media.istockphoto.com/id/898031604/photo/smiling-beautiful-woman-in-red-dress-and-high-heels-is-walking.jpg?b=1&s=170667a&w=0&k=20&c=uA67n04jYJNkYxasSWg3mlcUewb8veDleAzhmFHbLq4="
+  },
+  {
+    "id": 2,
+    "title": "some shop item",
+    "description": "this is item description",
+    "price": 100,
+    "url": "https://media.istockphoto.com/id/898031604/photo/smiling-beautiful-woman-in-red-dress-and-high-heels-is-walking.jpg?b=1&s=170667a&w=0&k=20&c=uA67n04jYJNkYxasSWg3mlcUewb8veDleAzhmFHbLq4="
+
+  },
+  {
+    "id": 3,
+    "title": "some shop item",
+    "description": "this is item description",
+    "price": 200,
+    "url": "https://media.istockphoto.com/id/898031604/photo/smiling-beautiful-woman-in-red-dress-and-high-heels-is-walking.jpg?b=1&s=170667a&w=0&k=20&c=uA67n04jYJNkYxasSWg3mlcUewb8veDleAzhmFHbLq4="
+
+  },
+  {
+    "id": 4,
+    "title": "some shop item",
+    "description": "this is item description",
+    "price": 250,
+    "url": "https://media.istockphoto.com/id/898031604/photo/smiling-beautiful-woman-in-red-dress-and-high-heels-is-walking.jpg?b=1&s=170667a&w=0&k=20&c=uA67n04jYJNkYxasSWg3mlcUewb8veDleAzhmFHbLq4="
+
+  },
+  {
+    "id": 5,
+    "title": "some shop item",
+    "description": "this is item description",
+    "price": 300,
+    "url": "https://media.istockphoto.com/id/898031604/photo/smiling-beautiful-woman-in-red-dress-and-high-heels-is-walking.jpg?b=1&s=170667a&w=0&k=20&c=uA67n04jYJNkYxasSWg3mlcUewb8veDleAzhmFHbLq4="
+
+  }
+]

@@ -1,45 +1,25 @@
 <template>
   <div class="home">
-    <router-link to="about">
-      <button>Go to about page with vue</button>
-    </router-link>
-    <h1>This is home page</h1>
-    <br>
-    <button @click="active = !active">Open</button>
-    <slide-up-down v-model="active" :duration="500">
-      <br>
-      Hello! state number is {{store_number}}
-      <br>
-      <button @click="addNumberToState">Increase</button>
-<!--      <button @click="decreaseNumberToState">Decrease</button>-->
-    </slide-up-down>
+    <div class="search-cont">
+      <input type="search" class="search" placeholder="Search your item...">
+    </div>
+    <div class="product-container">
+      <AppProduct v-for="(item,index) in products" :key="index" :data="item"/>
+    </div>
   </div>
 </template>
 
 <script>
-import store from '../store/index'
+import productData from '../products.json'
+import AppProduct from "@/components/AppProduct";
 
 export default {
+  components: {AppProduct},
   data(){
     return{
-      active: true,
-      store_number: store.state.number
-    }
-  },
-  mounted() {
-    store.commit('addVal')
-    // store.commit('decreaseVal')
-    this.store_number = store.getters.getVal
-  },
-  methods:{
-    addNumberToState(){
-       this.store_number++
-    },
-    decreaseNumberToState(){
-       this.store_number--
+      products: productData
     }
   }
-
 }
 </script>
 
