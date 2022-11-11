@@ -1,21 +1,66 @@
 <template>
   <div class="product">
     <div class="img">
-      <img src="https://media.istockphoto.com/id/898031604/photo/smiling-beautiful-woman-in-red-dress-and-high-heels-is-walking.jpg?b=1&s=170667a&w=0&k=20&c=uA67n04jYJNkYxasSWg3mlcUewb8veDleAzhmFHbLq4=" alt="photo">
+      <img :src="data.url" alt="photo">
     </div>
+    <strong class="title">{{ data.title }}</strong>
+    <p class="description">{{ data.description }}</p>
+    <strong class="price">{{ data.price }} USD</strong>
+    <center>
+      <button class="view">View</button>
+    </center>
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-    return{
-
+  props: {
+    data: {
+      required: true,
+      type: Object
     }
+  },
+  data() {
+    return {}
   }
 }
 </script>
 
-<style>
+<style scoped>
+.img {
+  width: 100%;
+  height: 100%;
+}
 
+.product {
+  border: 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;  width: 400px;
+  height: auto;
+  display: inline-block;
+  margin-left: 25px;
+  margin-top: 25px;
+  border-radius: 3px;
+}
+.title{
+  font-size: 18px;
+}
+.description{
+  font-size: 15px;
+}
+.price{
+  color: green;
+}
+.view{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  width: 150px;
+  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 </style>

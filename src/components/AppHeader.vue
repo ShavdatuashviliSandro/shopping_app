@@ -1,92 +1,51 @@
-<!--1:08:40-->
-
 <template>
-  <h1 v-if="header_title===undefined">this is default header</h1>
-  <h1 :style="`color: ${color}`">{{header_title}}</h1>
-  <h1 class="item-description" :style="`font-size: ${font_size}px`">this bag is very soft and easy to use</h1>
+  <div class="header">
+    <div class="navbar">
+      <ul class="nav">
+        <li><router-link to="/">SHOPPING</router-link></li>
+        <li><router-link to="/about">About us</router-link></li>
+        <li id="my-cart"><router-link to="/cart">Cart</router-link></li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  //to give parameters from parent to child, its if we want to use same components more than once
-  props: {
-    header_title: {
-      required: false
-    },
-    color:{
-      required: false
-    },
-    font_size:{
-      required: false
-    }
-  },
-  // data is for variables we use in html, variables like Array, String, div block etc.
   data() {
-    return {
-      numberVariable: 0,
-      textValue: null,
-      editor: '<div><p>Copyright: Sandro</p></div>',
-      max_limit: '<p>maximum limit<p/>',
-      developerClass: true,
-      render: true,
-      dataArray: ['Rails', 'Css', 'HTML', 'Vue.Js'],
-      developersArray: ['Sandro Shavdatuashvili', 'Some other dev']
-    }
-  },
-  // methods is for functions like click, for example: @click='changeColor'
-  methods: {
-    clickFunction() {
-      console.log(this.dataArray)
-    }
-  },
-  // is called after page will be uploaded in browser
-  mounted() {
-    this.clickFunction()
-  },
-  created() {
-    console.log(this.render)
-  },
-  // computed is a reactive data
-  computed: {
-    getData() {
-      return this.numberVariable
-    }
-  },
-  //watch is a like a watcher to a specific paragraph or a div, we can make
-  watch: {
-    numberVariable: {
-      immediate: true,
-      handler: function (){
-        if (this.numberVariable > 5) {
-          this.numberVariable = 0;
-        }
-      }
-    }
+    return {}
   }
 }
 </script>
 
-
 <style scoped>
-.item-description{
-  color: black;
+ul.nav {
+  margin:0;
+  padding:0;
+  list-style:none;
+  height:40px; line-height:40px;
+  background:#0d7963;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:13px;
 }
-h1 {
-  font-size: 36px;
-  color: orange;
+ul.nav li {
+  border-right:1px solid #189b80;
+  float:left;
+}
+ul.nav a {
+  display:block;
+  padding:0 28px;
+  color:#ccece6;
+  text-decoration:none;
+}
+ul.nav a:hover,
+ul.nav li.current a {
+  background:#086754;
 }
 
-.dev-text {
-  color: darkgoldenrod;
-}
-
-.second-dev-text {
-  color: green;
-}
-
-.box {
-  width: 200px;
-  height: 200px;
-  background-color: pink;
+#my-cart{
+  float: right;
+  border-right: 1px solid #189b80;
+  border-left: 1px solid #189b80;
 }
 </style>
