@@ -6,9 +6,9 @@
     <strong class="title">{{ data.title }}</strong>
     <p class="description">{{ data.description }}</p>
     <strong class="price">{{ data.price }} USD</strong>
-    <center>
-      <button class="view">View</button>
-    </center>
+    <div style="text-align: center;">
+      <button class="view" @click="openInner">View</button>
+    </div>
   </div>
 </template>
 
@@ -22,6 +22,11 @@ export default {
   },
   data() {
     return {}
+  },
+  methods:{
+    openInner(){
+      this.$router.push({path: 'inner', query: { plan: this.data.id }})
+    }
   }
 }
 </script>
