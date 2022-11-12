@@ -1,7 +1,7 @@
 <template>
   <div class="product">
     <div class="img">
-      <img :src="data.url" alt="photo">
+      <img :src="data.url" alt="photo" @click="openInner">
     </div>
     <strong class="title">{{ data.title }}</strong>
     <p class="description">{{ data.description }}</p>
@@ -35,6 +35,7 @@ export default {
 .img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .product {
@@ -68,5 +69,7 @@ export default {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
+
 }
 </style>

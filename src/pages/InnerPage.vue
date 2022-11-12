@@ -1,15 +1,15 @@
 <template>
   <AppHeader/>
-  <div class="inner" style="display: inline-block">
+  <div class="inner">
     <div class="img-section">
       <img class="image" :src="currentData[0].url" alt="logo">
     </div>
     <div class="product-info">
-      <strong class="product-title">{{currentData[0].title}}</strong>
+      <strong class="product-title">{{ currentData[0].title }}</strong>
       <p class="product-description">
-        {{currentData[0].description}}
+        {{ currentData[0].description }}
       </p>
-      <strong class="product-price">Price: {{full_balance}} USD</strong>
+      <strong class="product-price">Price: {{ full_balance }} USD</strong>
       <div class="quantity-section">
         <button class="button" @click="minus">-</button>
         {{ quantity }}
@@ -29,6 +29,7 @@
 import AppHeader from "@/components/AppHeader";
 import productData from '@/products.json'
 import store from '@/store/index'
+
 export default {
   components: {AppHeader},
 
@@ -44,26 +45,26 @@ export default {
     this.currentData = productData.filter(el => el.id === parseInt(this.$route.query.plan))
     this.full_balance = this.currentData[0].price * this.quantity
   },
-  methods:{
-    minus(){
-      if(this.quantity<=1){
+  methods: {
+    minus() {
+      if (this.quantity <= 1) {
         return 0
-      }else{
+      } else {
         this.quantity--
         this.decreaseFullBalance()
       }
     },
-    add(){
+    add() {
       this.quantity++
       this.increaseFullBalance()
     },
-    increaseFullBalance(){
+    increaseFullBalance() {
       this.full_balance += this.currentData[0].price
     },
-    decreaseFullBalance(){
+    decreaseFullBalance() {
       this.full_balance -= this.currentData[0].price
     },
-    addItem(){
+    addItem() {
       this.added_item = {
         id: this.currentData[0].id,
         url: this.currentData[0].url,
@@ -82,9 +83,15 @@ export default {
 </script>
 
 <style>
+.inner{
+  margin-top: 5%;
+  display: inline-block;
+  border-top: #2c3e50 1px solid;
+  border-bottom: #2c3e50 1px solid;
+}
 .img-section {
   float: left;
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 .image {
@@ -94,11 +101,12 @@ export default {
 .product-title {
   font-size: 36px;
 }
-.product-description{
+
+.product-description {
   font-size: 20px;
 }
 
-.product-price{
+.product-price {
   font-size: 24px;
   color: green;
 }
@@ -106,22 +114,27 @@ export default {
 .product-info {
   width: 80%;
   margin-left: 400px;
-  margin-top: 200px;
+  margin-top: 8%;
 }
-.quantity-section{
+
+.quantity-section {
   margin-top: 20px;
 }
-.button{
+
+.button {
   width: 40px;
   height: 25px;
   margin: 10px;
+  cursor: pointer;
 }
+
 .order-button {
   width: 200px;
   height: 40px;
-  background-color: antiquewhite;
-  color: black;
-  border-radius: 5px;
+  background-color: #189b80;
+  color: white;
+  border-radius: 3px;
   font-size: 16px;
+  cursor: pointer;
 }
 </style>
