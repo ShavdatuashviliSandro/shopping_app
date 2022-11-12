@@ -19,7 +19,7 @@
       <br>
       <br>
       <br>
-      <button class="order-button"><strong>Add to cart</strong></button>
+      <button class="order-button" @click="addItem"><strong>Add to cart</strong></button>
 
     </div>
   </div>
@@ -28,6 +28,7 @@
 <script>
 import AppHeader from "@/components/AppHeader";
 import productData from '@/products.json'
+import store from '@/store/index'
 export default {
   components: {AppHeader},
 
@@ -35,7 +36,8 @@ export default {
     return {
       currentData: productData,
       quantity: 1,
-      full_balance: 0
+      full_balance: 0,
+      added_item: {}
     }
   },
   mounted() {
@@ -60,6 +62,19 @@ export default {
     },
     decreaseFullBalance(){
       this.full_balance -= this.currentData[0].price
+    },
+    addItem(){
+      this.added_item = {
+        id: this.currentData[0].id,
+        url: this.currentData[0].url,
+        title: this.currentData[0].title,
+        description: this.currentData[0].description,
+        price: this.full_balance,
+        quantity: this.quantity,
+      }
+      // on this line I call store (store/index.js) mutations method to push my added_item in states cartProducts list
+      store.commit("setProduct", this.added_item)
+      console.log(store.state.cartProducts)
     }
   }
 }

@@ -1,0 +1,53 @@
+<template>
+  <div class="cart-product">
+    <div class="img" style="float: left">
+      <img :src="data.url" alt="photo">
+    </div>
+    <div>
+      <br>
+      <strong class="cart-product-item">Some item</strong>
+      <p>{{this.data.description}}</p>
+      <p>Quantity: 5X</p>
+      <strong class="cart-price">Price: {{data.price}}</strong>
+      <br>
+      <button class="delete-button"><strong>Delete</strong></button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props:{
+    data:{
+      required: true,
+      type: Object
+    }
+  },
+  data() {
+    return {}
+  }
+}
+</script>
+
+<style scoped>
+.cart-product {
+  border: 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  width: 30%;
+  display: inline-block;
+  float: left
+}
+
+.cart-product-item {
+  font-size: 20px;
+}
+
+.delete-button {
+  margin-top: 25px;
+  width: 100px;
+  height: 35px;
+  background-color: darkred;
+  color: white;
+  border: none;
+}
+</style>

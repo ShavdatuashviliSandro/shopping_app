@@ -3,8 +3,11 @@
     <div class="navbar">
       <ul class="nav">
         <li><router-link to="/">SHOPPING</router-link></li>
-        <li><router-link to="/about">About us</router-link></li>
-        <li id="my-cart"><router-link to="/cart">Cart</router-link></li>
+        <li id="my-cart">
+          <router-link to="/cart">
+            <sup>0</sup>Cart
+          </router-link>
+        </li>
       </ul>
     </div>
   </div>

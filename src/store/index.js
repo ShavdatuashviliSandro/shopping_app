@@ -2,20 +2,16 @@ import {createStore} from 'vuex'
 
 export default createStore({
     state: {
-        number: 20
+        cartProducts: []
     },
     mutations:{
-        addVal(state) {
-            state.number += 1
+        setProduct(state,val){
+            state.cartProducts.push(val)
         }
-        // },
-        // decreaseVal(state){
-        //     state.number-=1
-        // }
     },
     getters:{
-        getVal: state => {
-            return state.number
+        getProducts: () => {
+            return this.state.cartProducts
         }
     }
 })

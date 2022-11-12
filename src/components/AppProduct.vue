@@ -39,7 +39,8 @@ export default {
 
 .product {
   border: 1px solid;
-  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  width: 400px;
   height: auto;
   display: inline-block;
   margin-left: 25px;
