@@ -43,6 +43,7 @@ export default {
   methods:{
     deleteItem(id){
       store.commit('removeProduct', id)
+      localStorage.setItem('cartProducts', JSON.stringify(store.state.cartProducts))
     }
   }
 }
