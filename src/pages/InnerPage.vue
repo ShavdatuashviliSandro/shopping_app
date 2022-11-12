@@ -84,6 +84,8 @@ export default {
       }
       // on this line I call store (store/index.js) mutations method to push my added_item in state's cartProducts array
       store.commit("setProduct", this.added_item)
+      // Created local storage with name of cartProducts, it saves our cartProducts defined in store
+      localStorage.setItem('cartProducts', JSON.stringify(store.state.cartProducts))
       this.disableButton()
     }
   }

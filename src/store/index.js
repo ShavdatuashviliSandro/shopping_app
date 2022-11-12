@@ -10,6 +10,10 @@ export default createStore({
         },
         removeProduct(state,id){
             state.cartProducts = state.cartProducts.filter(el => el.id !== id)
+        },
+        // Created method for locale storage that pushes storage data in out state's cartProducts array
+        replaceProduct(state,val){
+            state.cartProducts = val
         }
     },
     getters:{
