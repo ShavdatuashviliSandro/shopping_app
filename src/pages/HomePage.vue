@@ -6,7 +6,7 @@
       <input v-model="searchWord" type="search" class="search" placeholder="Search your item...">
     </div>
     <div class="search-result">
-      <strong>{{errorMessage}}</strong>
+      <strong v-show="errorMessage.length !== 0">{{errorMessage}}</strong>
     </div>
     <div class="product-container">
       <AppProduct v-for="(item,index) in getData" :key="index" :data="item"/>
@@ -39,8 +39,6 @@ export default {
       handler: function(){
         if(this.getData.length===0){
           this.errorMessage = 'Sorry.. we cant find item with this name.'
-        }else{
-          this.errorMessage = ''
         }
       }
     }
