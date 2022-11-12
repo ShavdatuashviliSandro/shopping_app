@@ -9,6 +9,7 @@
     </div>
     <br><br>
     <div class="cart-products" style="width: 100%;height:100%;position: absolute;">
+      <p class="err" v-show="getData.length === 0" style="font-weight: bold; font-size: 30px;text-align: center; color: darkred">Your cart is empty</p>
       <AppCartProduct v-for="(item,index) in getData" :key='index' :data="item"/>
     </div>
   </div>
@@ -23,7 +24,8 @@ export default {
   components: {AppHeader, AppCartProduct},
 
   data() {
-    return {}
+    return {
+    }
   },
   computed: {
     getData() {
