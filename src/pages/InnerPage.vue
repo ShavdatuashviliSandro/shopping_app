@@ -11,15 +11,15 @@
       </p>
       <strong class="product-price">Price: {{ full_balance }} USD</strong>
       <div class="quantity-section">
-        <button class="button" @click="minus">-</button>
+        <button class="button" :disabled="buttonDisabled === true" @click="minus">-</button>
         {{ quantity }}
-        <button class="button" @click="add">+</button>
+        <button class="button" :disabled="buttonDisabled === true" @click="add">+</button>
       </div>
 
       <br>
       <br>
       <br>
-      <button class="order-button" @click="addItem"><strong>Add to cart</strong></button>
+      <button class="order-button" :disabled="buttonDisabled === true" @click="addItem"><strong>Add to cart</strong></button>
 
     </div>
   </div>
@@ -38,12 +38,14 @@ export default {
       currentData: productData,
       quantity: 1,
       full_balance: 0,
-      added_item: {}
+      added_item: null,
+      buttonDisabled: false
     }
   },
   mounted() {
     this.currentData = productData.filter(el => el.id === parseInt(this.$route.query.plan))
     this.full_balance = this.currentData[0].price * this.quantity
+    this.disableButton()
   },
   methods: {
     minus() {
@@ -64,6 +66,13 @@ export default {
     decreaseFullBalance() {
       this.full_balance -= this.currentData[0].price
     },
+    disableButton(){
+      store.getters.getProducts.forEach((element) => {
+        if(element.id === this.currentData[0].id) {
+          this.buttonDisabled = true
+        }
+      })
+    },
     addItem() {
       this.added_item = {
         id: this.currentData[0].id,
@@ -73,9 +82,9 @@ export default {
         price: this.full_balance,
         quantity: this.quantity,
       }
-      // on this line I call store (store/index.js) mutations method to push my added_item in states cartProducts list
+      // on this line I call store (store/index.js) mutations method to push my added_item in state's cartProducts array
       store.commit("setProduct", this.added_item)
-      console.log(store.state.cartProducts)
+      this.disableButton()
     }
   }
 }

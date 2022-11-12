@@ -5,7 +5,7 @@
     <div class="cart-info">
       <strong class="cart-balance-info">Full balance of items in my cart is:</strong>
       <p> - </p>
-      <strong class="price">200 USD</strong>
+      <strong class="price">{{this.getFullBalance}} USD</strong>
     </div>
     <br><br>
     <div class="cart-products" style="width: 100%;height:100%;position: absolute;">
@@ -25,11 +25,19 @@ export default {
 
   data() {
     return {
+      full_balance: 0
     }
   },
   computed: {
     getData() {
       return store.getters.getProducts
+    },
+    getFullBalance(){
+      let balance = 0
+      this.getData.forEach(item => {
+        balance+=item.price
+      })
+      return balance;
     }
   }
 }
