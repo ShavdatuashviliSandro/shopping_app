@@ -12,7 +12,6 @@
     "description": "This stunning flowy dress features a crew neckline, long sleeve with smocked cuffs, classical solid color two",
     "price": 100,
     "url": "https://images.meesho.com/images/products/66807529/y7zl5_256.jpg"
-
   },
   {
     "id": 3,
@@ -20,7 +19,6 @@
     "description": "This stunning flowy dress features a crew neckline, long sleeve with smocked cuffs, classical solid color three",
     "price": 200,
     "url": "https://m.media-amazon.com/images/I/51xw7bnYVTL._SY355_.jpg"
-
   },
   {
     "id": 4,
@@ -28,7 +26,6 @@
     "description": "This stunning flowy dress features a crew neckline, long sleeve with smocked cuffs, classical solid color four",
     "price": 250,
     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Liberty_and_Company_tea_gown_c._1887.jpg/256px-Liberty_and_Company_tea_gown_c._1887.jpgman-in-red-dress-and-high-heels-is-walking.jpg?b=1&s=170667a&w=0&k=20&c=uA67n04jYJNkYxasSWg3mlcUewb8veDleAzhmFHbLq4="
-
   },
   {
     "id": 5,
@@ -36,23 +33,20 @@
     "description": "This stunning flowy dress features a crew neckline, long sleeve with smocked cuffs, classical solid color five",
     "price": 300,
     "url": "https://www.childrensalonoutlet.com/media/catalog/product/cache/0/small_image/256x256/9df78eab33525d08d6e5fb8d27136e95/n/i/nicki-macfarlane-burnt-red-silk-organza-dress-103732-b301fb9bd6db18a4b79a5d597e769eb39077db40.jpg"
-
   },
   {
-  "id": 6,
+    "id": 6,
     "title": "Smocked Flowy Tiered Midi Dress six",
     "description": "This stunning flowy dress features a crew neckline, long sleeve with smocked cuffs, classical solid color six",
-  "price": 350,
-  "url": "https://images.meesho.com/images/products/159014758/8ym3s_256.jpg"
-
-},
+    "price": 350,
+    "url": "https://images.meesho.com/images/products/159014758/8ym3s_256.jpg"
+  },
   {
     "id": 7,
     "title": "Smocked Flowy Tiered Midi Dress seven",
     "description": "This stunning flowy dress features a crew neckline, long sleeve with smocked cuffs, classical solid color seven",
     "price": 20,
     "url": "https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/256x256/9df78eab33525d08d6e5fb8d27136e95/n/i/nicki-macfarlane-blue-silk-organza-dress-103733-6639b5a6bbf66e585ff1e8c966ef5da9a1d6ed15.jpg"
-
   },
   {
     "id": 8,

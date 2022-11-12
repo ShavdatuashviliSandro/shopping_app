@@ -9,17 +9,17 @@
       <p class="product-description">
         {{currentData[0].description}}
       </p>
-      <strong class="product-price">Price: {{currentData[0].price}} USD</strong>
+      <strong class="product-price">Price: {{full_balance}} USD</strong>
       <div class="quantity-section">
-        <button class="button">+</button>
+        <button class="button" @click="minus">-</button>
         {{ quantity }}
-        <button class="button">-</button>
+        <button class="button" @click="add">+</button>
       </div>
 
       <br>
       <br>
       <br>
-      <button class="order-button">Order</button>
+      <button class="order-button"><strong>Order</strong></button>
 
     </div>
   </div>
@@ -34,11 +34,27 @@ export default {
   data() {
     return {
       currentData: productData,
-      quantity: 0
+      quantity: 1,
+      full_balance: 0
     }
   },
   mounted() {
     this.currentData = productData.filter(el => el.id === parseInt(this.$route.query.plan))
+    this.full_balance = this.currentData[0].price * this.quantity
+  },
+  methods:{
+    minus(){
+      if(this.quantity<=1){
+        return 0
+      }else{
+        this.quantity--
+        this.full_balance = this.currentData[0].price * this.quantity
+      }
+    },
+    add(){
+      this.quantity++
+      this.full_balance = this.currentData[0].price * this.quantity
+    }
   }
 }
 
@@ -77,9 +93,7 @@ export default {
 .button{
   width: 40px;
   height: 25px;
-  color: black;
-  background-color: antiquewhite;
-  border: 2px solid;
+  margin: 10px;
 }
 .order-button {
   width: 200px;
@@ -87,5 +101,6 @@ export default {
   background-color: antiquewhite;
   color: black;
   border-radius: 5px;
+  font-size: 16px;
 }
 </style>
