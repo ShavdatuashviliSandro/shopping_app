@@ -10,8 +10,8 @@ export default createStore({
         }
     },
     getters:{
-        getProducts: () => {
-            return this.state.cartProducts
+        getProducts: state => {
+            return state.cartProducts
         }
     }
 })

@@ -6,7 +6,7 @@
     <div>
       <br>
       <strong class="cart-product-item">Some item</strong>
-      <p>{{this.data.description}}</p>
+      <p>{{data.description}}</p>
       <p>Quantity: 5X</p>
       <strong class="cart-price">Price: {{data.price}}</strong>
       <br>

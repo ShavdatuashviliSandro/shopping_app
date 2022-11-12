@@ -2,21 +2,39 @@
   <div class="header">
     <div class="navbar">
       <ul class="nav">
-        <li><router-link to="/">SHOPPING</router-link></li>
-        <li id="my-cart">
-          <router-link to="/cart">
-            <sup>0</sup>Cart
-          </router-link>
-        </li>
+        <header>
+          <li><router-link to="/">SHOPPING</router-link></li>
+          <li :class="{'active' :active}" id="my-cart" class="cart">
+            <router-link to="/cart">
+              <sup>{{getProductLength}}</sup>Cart
+            </router-link>
+          </li>
+        </header>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
+import store from '@/store/index'
 export default {
   data() {
-    return {}
+    return {
+      active: false
+    }
+  },
+  computed:{
+    getProductLength(){
+      return store.getters.getProducts.length
+    }
+  },
+  watch:{
+    getProductLength: function (){
+      this.active = true
+      setTimeout(() => {
+        this.active = false
+      }, 10)
+    }
   }
 }
 </script>
@@ -50,5 +68,11 @@ ul.nav li.current a {
   float: right;
   border-right: 1px solid #189b80;
   border-left: 1px solid #189b80;
+}
+header .cart{
+  transition: 2s;
+}
+header .cart.active{
+  transform: scale(2);
 }
 </style>
