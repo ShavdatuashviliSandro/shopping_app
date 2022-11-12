@@ -6,6 +6,9 @@
           <li>
             <router-link to="/">SHOPPING</router-link>
           </li>
+          <li>
+            <router-link to="/">SHOPPING</router-link>
+          </li>
           <li :class="{'active' :active}" id="my-cart" class="cart">
             <router-link to="/cart">
               <span>{{ getProductLength }}</span> - Cart
