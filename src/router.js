@@ -8,6 +8,7 @@ const routes = [
         path: "/",
         name: "Home",
         component: HomePage,
+        title: 'Shopping - Home Page'
     },
     {
         path: "/cart",

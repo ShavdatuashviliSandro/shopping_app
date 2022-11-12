@@ -1,8 +1,9 @@
 <template>
+    <title>Shop - home</title>
   <div class="header">
     <div class="navbar">
-      <ul class="nav">
-        <header>
+      <header>
+        <ul class="nav">
           <li>
             <router-link to="/">SHOPPING</router-link>
           </li>
@@ -11,8 +12,8 @@
               <span>{{ getProductLength }}</span> - Cart
             </router-link>
           </li>
-        </header>
-      </ul>
+        </ul>
+      </header>
     </div>
   </div>
 </template>
