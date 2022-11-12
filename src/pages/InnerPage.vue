@@ -19,7 +19,7 @@
       <br>
       <br>
       <br>
-      <button class="order-button"><strong>Order</strong></button>
+      <button class="order-button"><strong>Add to cart</strong></button>
 
     </div>
   </div>
@@ -48,12 +48,18 @@ export default {
         return 0
       }else{
         this.quantity--
-        this.full_balance = this.currentData[0].price * this.quantity
+        this.decreaseFullBalance()
       }
     },
     add(){
       this.quantity++
-      this.full_balance = this.currentData[0].price * this.quantity
+      this.increaseFullBalance()
+    },
+    increaseFullBalance(){
+      this.full_balance += this.currentData[0].price
+    },
+    decreaseFullBalance(){
+      this.full_balance -= this.currentData[0].price
     }
   }
 }
