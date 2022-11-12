@@ -7,6 +7,9 @@ export default createStore({
     mutations:{
         setProduct(state,val){
             state.cartProducts.push(val)
+        },
+        removeProduct(state,id){
+            state.cartProducts = state.cartProducts.filter(el => el.id !== id)
         }
     },
     getters:{

@@ -10,7 +10,7 @@
       <p>Quantity: {{ data.quantity }}</p>
       <strong class="cart-price">Price: {{ data.price }} USD</strong>
       <br>
-      <button class="delete-button"><strong>Delete</strong></button>
+      <button class="delete-button" @click="sendId"><strong>Delete</strong></button>
     </div>
   </div>
 </template>
@@ -29,6 +29,9 @@ export default {
   methods: {
     openInner() {
       this.$router.push({path: 'inner', query: {plan: this.data.id}})
+    },
+    sendId(){
+      this.$emit('getId',this.data.id)
     }
   }
 }
