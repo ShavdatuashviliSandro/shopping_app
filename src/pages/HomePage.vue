@@ -54,8 +54,11 @@ export default {
   width: 250px;
   height: 30px;
 }
+.search-cont{
+  margin-top: 30px;
+}
 .search-result{
-  margin-top: 70px;
+  margin-top: 50px;
   font-size: 30px;
 }
 </style>
