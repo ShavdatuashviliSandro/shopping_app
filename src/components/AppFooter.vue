@@ -21,7 +21,6 @@ export default {
   bottom: 0;
 }
 a{
-  text-decoration: none;
   color: white;
 }
 </style>
