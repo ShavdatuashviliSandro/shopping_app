@@ -5,7 +5,7 @@
     </div>
     <strong class="title">{{ data.title }}</strong>
     <p class="description">{{ data.description }}</p>
-    <strong class="price">{{ data.price }} USD</strong>
+    <strong class="price">{{ data.price }}.00 USD</strong>
     <div style="text-align: center;">
       <button class="view" @click="openInner">View</button>
     </div>
