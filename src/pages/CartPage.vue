@@ -5,7 +5,8 @@
     <p> - </p>
     <strong class="price">{{ this.getFullBalance }} USD</strong>
     <div class="cart-products">
-      <p class="err" v-show="getData.length === 0">🛒 Your cart is empty</p>
+      <p class="info-text" v-show="getData.length === 0">🛒 Your cart is empty</p>
+      <p class="info-text" v-show="deleteText===true">You successfully deleted item from the cart</p>
       <AppCartProduct v-for="(item,index) in getData" :key='index' :data="item" @getId="deleteItem"/>
     </div>
   </div>
@@ -20,7 +21,8 @@ export default {
 
   data() {
     return {
-      full_balance: 0
+      full_balance: 0,
+      deleteText: false
     }
   },
   computed: {
@@ -38,6 +40,7 @@ export default {
   methods: {
     deleteItem(id) {
       store.commit('removeProduct', id)
+      this.deleteText = true
       localStorage.setItem('cartProducts', JSON.stringify(store.state.cartProducts))
     }
   }
@@ -61,7 +64,7 @@ export default {
   margin-left: 20px;
 }
 
-.err {
+.info-text {
   font-weight: bold;
   font-size: 30px;
   text-align: center;
