@@ -47,7 +47,13 @@ export default {
   margin-left: 25px;
   margin-top: 25px;
   border-radius: 3px;
+  transition: transform .3s;
 }
+
+.product:hover:hover {
+  transform: scale(1.05);
+}
+
 .title{
   font-size: 18px;
 }
