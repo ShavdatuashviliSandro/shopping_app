@@ -23,9 +23,9 @@ export default {
   data() {
     return {}
   },
-  methods:{
-    openInner(){
-      this.$router.push({path: 'inner', query: { plan: this.data.id }})
+  methods: {
+    openInner() {
+      this.$router.push({path: 'inner', query: {plan: this.data.id}})
     }
   }
 }
@@ -47,23 +47,26 @@ export default {
   margin-left: 25px;
   margin-top: 25px;
   border-radius: 3px;
-  transition: transform .3s;
+  transition: transform .2s;
 }
 
 .product:hover:hover {
   transform: scale(1.05);
 }
 
-.title{
+.title {
   font-size: 18px;
 }
-.description{
+
+.description {
   font-size: 15px;
 }
-.price{
+
+.price {
   color: green;
 }
-.view{
+
+.view {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -76,6 +79,11 @@ export default {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
-
+}
+.view:hover{
+  color: #086754;
+  background-color: white;
+  border: 1px solid;
+  font-weight: bold;
 }
 </style>

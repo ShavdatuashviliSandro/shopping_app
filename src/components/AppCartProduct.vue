@@ -45,7 +45,11 @@ export default {
 .cart-product {
   border: 1px solid;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-  max-height: 620px;
+  margin-top: 25px;
+  width: 580px;
+  height: 34%;
+  float: left;
+  margin-left: 20px;
 }
 
 .cart-product-item {

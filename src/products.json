@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "title": "Under Armour Men's ColdGear Compression Mock",
-    "description": "Dual-layer fabric with an ultra-warm, brushed interior & a smooth, fast-drying exterior, Stretch-mesh back & underarm panels provide strategic ventilation without sacrificing warmth",
+    "title": "Under Armour ColdGear Compression",
+    "description": "Dual-layer fabric with an ultra-warm, brushed interior & a smooth,underarm panels provide strategic ventilation without sacrificing warmth",
     "price": 50,
     "url": "https://m.media-amazon.com/images/I/510zo3MsjzL._AC_UL320_.jpg"
   },
   {
     "id": 2,
-    "title": "Under Armour Men's HeatGear Compression Long-Sleeve T-Shirt",
-    "description": "Super-light HeatGear fabric delivers superior coverage without weighing you down, Mesh underarm & back panels for strategic ventilation, 4-way stretch construction moves better in every direction",
+    "title": "Under Armour HeatGear Compression T-Shirt",
+    "description": "Super-light HeatGear fabric delivers superior coverage without weighing you down, 4-way stretch construction moves better in every direction",
     "price": 24,
     "url": "https://m.media-amazon.com/images/I/415xRYxXTpL._AC_UL320_.jpg"
   },
   {
     "id": 3,
-    "title": "Under Armour Men's HeatGear Compression Short-Sleeve T-Shirt",
-    "description": "Super-light HeatGear fabric delivers superior coverage without weighing you down, Mesh underarm & back panels for strategic ventilation, Material wicks sweat & dries really fast",
+    "title": "Under Armour HeatGear Compression T-Shirt",
+    "description": "Super-light HeatGear fabric delivers superior coverage without weighing you down, Mesh underarm for strategic ventilation, Material wicks sweat & dries really fast",
     "price": 29,
     "url": "https://m.media-amazon.com/images/I/41Tl89KmYkL._AC_UL320_.jpg"
   },
   {
     "id": 4,
-    "title": "Under Armour Men's ColdGear Compression Mock",
-    "description": "Dual-layer fabric with an ultra-warm, brushed interior & a smooth, fast-drying exterior,Stretch-mesh back & underarm panels provide strategic ventilation without sacrificing warmth",
+    "title": "Under Armour Men's ColdGear Compression",
+    "description": "Dual-layer fabric with an ultra-warm, brushed interior & a smooth,Stretch-mesh back & underarm panels provide strategic ventilation without sacrificing warmth",
     "price": 53,
     "url": "https://m.media-amazon.com/images/I/51r9buENwrL._AC_UL320_.jpg"
   },
@@ -50,7 +50,7 @@
   },
   {
     "id": 8,
-    "title": "Title White Training Gloves",
+    "title": "Smocked Flowy Tiered Midi eight",
     "description": "Brilliant and luxurious patent leathers and extra deep pile suede leathers, lo-impact fist protecting foam sandwiched around a shock absorbing mid-layer",
     "price": 199,
     "url": "https://m.media-amazon.com/images/I/71QZM5IGCRL._AC_UL320_.jpg"

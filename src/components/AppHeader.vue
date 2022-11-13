@@ -37,7 +37,7 @@ export default {
       this.active = true
       setTimeout(() => {
         this.active = false
-      }, 10)
+      }, 200)
     }
   }
 }
@@ -48,11 +48,13 @@ ul.nav {
   margin: 0;
   padding: 0;
   list-style: none;
-  height: 36px;
-  line-height: 36px;
+  height: 50px;
+  line-height: 50px;
   background: #0d7963;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
+  font-weight: bold;
+
 }
 
 ul.nav li {
@@ -79,10 +81,10 @@ ul.nav li.current a {
 }
 
 header .cart {
-  transition: 2s;
+  transition: transform .1s;
 }
 
 header .cart.active {
-  transform: scale(2);
+  transform: scale(1.1);
 }
 </style>

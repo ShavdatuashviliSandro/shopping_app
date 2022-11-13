@@ -1,27 +1,22 @@
 <template>
   <div class="cart">
-    <AppHeader/>
     <h1>My cart page</h1>
-    <div class="cart-info">
-      <strong class="cart-balance-info">Full balance of items in my cart is:</strong>
-      <p> - </p>
-      <strong class="price">{{this.getFullBalance}} USD</strong>
-    </div>
-    <br><br>
-    <div class="cart-products" style="width: 100%;height:100%;position: absolute;">
-      <p class="err" v-show="getData.length === 0" style="font-weight: bold; font-size: 30px;text-align: center; color: darkred">Your cart is empty</p>
+    <strong class="cart-balance-info">Full balance of items in my cart is:</strong>
+    <p> - </p>
+    <strong class="price">{{ this.getFullBalance }} USD</strong>
+    <div class="cart-products">
+      <p class="err" v-show="getData.length === 0">🛒 Your cart is empty</p>
       <AppCartProduct v-for="(item,index) in getData" :key='index' :data="item" @getId="deleteItem"/>
     </div>
   </div>
 </template>
 
 <script>
-import AppHeader from "@/components/AppHeader";
 import AppCartProduct from "@/components/AppCartProduct";
 import store from '@/store/index'
 
 export default {
-  components: {AppHeader, AppCartProduct},
+  components: {AppCartProduct},
 
   data() {
     return {
@@ -32,16 +27,16 @@ export default {
     getData() {
       return store.getters.getProducts
     },
-    getFullBalance(){
+    getFullBalance() {
       let balance = 0
       this.getData.forEach(item => {
-        balance+=item.price
+        balance += item.price
       })
       return balance;
     }
   },
-  methods:{
-    deleteItem(id){
+  methods: {
+    deleteItem(id) {
       store.commit('removeProduct', id)
       localStorage.setItem('cartProducts', JSON.stringify(store.state.cartProducts))
     }
@@ -50,10 +45,6 @@ export default {
 </script>
 
 <style scoped>
-.cart-info {
-  float: left;
-  margin-left: 40%;
-}
 
 .cart-balance-info {
   font-size: 26px;
@@ -66,8 +57,14 @@ export default {
 
 .cart-products {
   margin-top: 5%;
-  width: 100%;
-  height: 100%;
-  display: flex
+  height: 1000px;
+  margin-left: 20px;
+}
+
+.err {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: darkred
 }
 </style>

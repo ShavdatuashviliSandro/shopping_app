@@ -1,5 +1,4 @@
 <template>
-  <AppHeader/>
   <br>
   <div class="home">
     <div class="search-cont">
@@ -15,17 +14,13 @@
   <br>
   <br>
   <br>
-  <AppFooter/>
 </template>
 
 <script>
 import productData from '../products.json';
 import AppProduct from "@/components/AppProduct";
-import AppHeader from "@/components/AppHeader";
-import AppFooter from "@/components/AppFooter";
-
 export default {
-  components: {AppHeader, AppProduct, AppFooter},
+  components: {AppProduct},
   data(){
     return{
       productsData: productData,
@@ -44,6 +39,9 @@ export default {
       handler: function(){
         if(this.getData.length===0){
           this.errorMessage = 'Sorry.. we cant find item with this name.'
+        }else{
+          //else statement for not return error message when we delete search field
+          this.errorMessage = ''
         }
       }
     }

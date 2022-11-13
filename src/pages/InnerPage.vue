@@ -1,5 +1,4 @@
 <template>
-  <AppHeader/>
   <div class="inner">
     <div class="img-section">
       <img class="image" :src="currentData[0].url" alt="logo">
@@ -15,23 +14,18 @@
         {{ quantity }}
         <button class="button" :disabled="buttonDisabled === true" @click="add">+</button>
       </div>
-
-      <br>
-      <br>
       <br>
       <button class="order-button" :disabled="buttonDisabled === true" @click="addItem"><strong>Add to cart</strong></button>
-
+      <br>
     </div>
   </div>
 </template>
 
 <script>
-import AppHeader from "@/components/AppHeader";
 import productData from '@/products.json'
 import store from '@/store/index'
 
 export default {
-  components: {AppHeader},
 
   data() {
     return {
@@ -123,8 +117,8 @@ export default {
 }
 
 .product-info {
-  width: 80%;
-  margin-left: 400px;
+  width: 40%;
+  margin-left: 36%;
   margin-top: 8%;
 }
 
@@ -147,5 +141,11 @@ export default {
   border-radius: 3px;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid;
+}
+.order-button:hover{
+  color: #189b80;
+  background-color: white;
 }
 </style>
