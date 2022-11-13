@@ -12,15 +12,20 @@
       <AppProduct v-for="(item,index) in getData" :key="index" :data="item"/>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <AppFooter/>
 </template>
 
 <script>
 import productData from '../products.json';
 import AppProduct from "@/components/AppProduct";
 import AppHeader from "@/components/AppHeader";
+import AppFooter from "@/components/AppFooter";
 
 export default {
-  components: {AppHeader, AppProduct},
+  components: {AppHeader, AppProduct, AppFooter},
   data(){
     return{
       productsData: productData,
